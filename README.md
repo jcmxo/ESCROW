@@ -1,6 +1,29 @@
 # Escrow DApp
 
-A decentralized application (DApp) for secure token exchanges using an escrow smart contract.
+Sistema educativo de depósito en garantía (escrow). Permite simular el flujo completo: depósito, verificación, liberación o devolución de fondos según condiciones. Ideal para aprender lógica de negocio y seguridad en transacciones.
+
+## Descripción
+
+Escrow es un proyecto diseñado para implementar un sistema de depósito en garantía (escrow), pensado para servir como ejercicio académico y educativo. El objetivo es:
+
+- Mostrar de forma práctica cómo funciona un servicio de escrow: recepción de fondos, retención segura, verificación, liberación o cancelación según condiciones pactadas.
+- Permitir a estudiantes o desarrolladores en formación entender los mecanismos básicos de escrow, su lógica de negocio, y las implicaciones de seguridad.
+- Servir como base modular que puede extenderse — por ejemplo, integrando contratos inteligentes, validaciones, manejo de múltiples monedas, etc.
+
+Este repositorio incluye funcionalidades básicas, documentación paso a paso para instalación y uso, así como buenas prácticas para que puedas estudiarlo, modificarlo y expandirlo a tus necesidades.
+
+## 🧰 ¿Para quién es este proyecto?
+
+- Estudiantes de desarrollo de software que quieren aprender sobre lógica de negocio y flujos de control en escrow.
+- Personas interesadas en comprender cómo se maneja un sistema de depósito en garantía (escrow) desde cero.
+- Desarrolladores que buscan una base para construir soluciones más completas, ya sea con backend, blockchain, o integración de métodos de pago.
+
+## ⭐ Lo que aprenderás / lo que ofrece
+
+- Comprender la lógica fundamental de un escrow: ¿qué sucede cuando se deposita? ¿qué criterios deben cumplirse para liberar o devolver los fondos?
+- Estructura organizada del proyecto, ideal para reutilización o ampliación.
+- Guía clara de instalación y uso (envío de fondos, verificación, liberación).
+- Buenas prácticas de proyecto: documentación, modularidad, claridad de código — útil tanto para estudiar como para contribuir.
 
 ## Project Structure
 
@@ -15,9 +38,9 @@ A decentralized application (DApp) for secure token exchanges using an escrow sm
 │       └── Escrow.t.sol  # Contract tests
 │
 ├── web/                   # Frontend (Next.js 14)
-│   ├── app/              # Next.js app directory
 │   ├── components/       # React components
-│   └── lib/              # Utilities and contracts
+│   ├── lib/              # Utilities and contracts
+│   └── pages/            # Next.js pages
 │
 └── deploy.sh             # Automated deployment script
 ```
@@ -97,7 +120,7 @@ cd web
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3006](http://localhost:3006) in your browser (or the port configured in `package.json`).
 
 ## Usage
 
@@ -107,6 +130,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 4. **Complete Operation**: As a different user, complete an active operation
 5. **Cancel Operation**: As the creator, cancel your own active operation
 6. **View Balances**: Use the Debug Balances panel to monitor token balances
+7. **Transaction History**: View all transactions and events in the Transaction History panel
+
+## Features
+
+- ✅ Secure token escrow operations
+- ✅ Real-time transaction history
+- ✅ Balance monitoring
+- ✅ Multi-account support
+- ✅ Event tracking and logging
 
 ## Testing
 
@@ -120,4 +152,3 @@ forge test
 ## License
 
 MIT
-
